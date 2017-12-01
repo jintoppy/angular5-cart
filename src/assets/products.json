@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "IPhone",
+        "company": "Apple",
+        "price": "1000",
+        "imgUrl": ""
+    },
+    {
+        "id": 2,
+        "name": "S7",
+        "company": "Samsung",
+        "price": "800",
+        "imgUrl": ""
+    },
+    {
+        "id": 3,
+        "name": "Nexus",
+        "company": "LG",
+        "price": "500",
+        "imgUrl": ""
+    }
+]

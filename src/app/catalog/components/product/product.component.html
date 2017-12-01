@@ -1,0 +1,18 @@
+<div class="product" *ngIf="product">
+    <h4>{{product.name}}</h4>
+    <p class="company">
+      <span>Company : </span>
+      {{product.company}}
+    </p>
+    <p>
+      <img [src]="product.imgUrl" [alt]="product.name">
+    </p>
+    <p class="price">
+        <span>Price : </span>
+        {{product.price}}
+    </p>
+    <button>Add to Cart</button>
+</div>
+<div *ngIf="!product">
+  Loading...
+</div>

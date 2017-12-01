@@ -1,0 +1,18 @@
+<h2>Products</h2>
+
+<div class="product-list-item" *ngFor="let p of products">
+  <h4>{{p.name}}</h4>
+  <p class="company">
+    <span>Company : </span>
+    {{p.company}}
+  </p>
+  <p>
+    <img [src]="p.imgUrl" [alt]="p.name">
+  </p>
+  <p class="price">
+      <span>Price : </span>
+      {{p.price}}
+  </p>
+  <button>Add to Cart</button>
+  <a [routerLink]="['/product', p.id]">View Details</a>
+</div>
