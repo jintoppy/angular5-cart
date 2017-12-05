@@ -4,20 +4,20 @@
         "name": "IPhone",
         "company": "Apple",
         "price": "1000",
-        "imgUrl": ""
+        "imgUrl": "https://drop.ndtv.com/TECH/product_database/images/913201720152AM_635_iphone_x.jpeg"
     },
     {
         "id": 2,
         "name": "S7",
         "company": "Samsung",
         "price": "800",
-        "imgUrl": ""
+        "imgUrl": "https://s7d2.scene7.com/is/image/SamsungUS/S8_Black_front?$product-details-jpg$"
     },
     {
         "id": 3,
         "name": "Nexus",
         "company": "LG",
         "price": "500",
-        "imgUrl": ""
+        "imgUrl": "https://drop.ndtv.com/TECH/product_database/images/64201330335PM_635_lg_nexus_4.png"
     }
 ]

@@ -8,6 +8,7 @@ import { UserModule } from './user/user.module';
 import { CatalogModule } from './catalog/catalog.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
+import { AuthGuard } from './auth.guard';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,9 @@ import { HeaderComponent } from './components/header/header.component';
     UserModule,
     CatalogModule
   ],
-  providers: [],
+  providers: [
+    AuthGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

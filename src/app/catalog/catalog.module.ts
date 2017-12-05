@@ -6,6 +6,7 @@ import { CatalogRoutingModule } from './catalog-routing.module';
 import { ProductlistComponent } from './components/productlist/productlist.component';
 import { ProductComponent } from './components/product/product.component';
 import { CatalogService } from './catalog.service';
+import { CatalogComponent } from './components/catalog/catalog.component';
 
 @NgModule({
   imports: [
@@ -13,7 +14,7 @@ import { CatalogService } from './catalog.service';
     CatalogRoutingModule,
     HttpClientModule
   ],
-  declarations: [ProductlistComponent, ProductComponent],
+  declarations: [ProductlistComponent, ProductComponent, CatalogComponent],
   providers: [CatalogService]
 })
 export class CatalogModule { }

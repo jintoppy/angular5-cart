@@ -5,13 +5,13 @@
       {{product.company}}
     </p>
     <p>
-      <img [src]="product.imgUrl" [alt]="product.name">
+      <img [src]="product.imgUrl" class="img-fluid responsive-img" [alt]="product.name">
     </p>
     <p class="price">
         <span>Price : </span>
         {{product.price}}
     </p>
-    <button>Add to Cart</button>
+    <button class="btn btn-success">Add to Cart</button>
 </div>
 <div *ngIf="!product">
   Loading...
