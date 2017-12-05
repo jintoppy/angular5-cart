@@ -10,6 +10,7 @@ const routes: Routes = [
     path: 'checkout',
     component: CheckoutComponent,
     canActivate: [AuthGuard],
+    canDeactivate: [AuthGuard],
     children: [
       {
         path: '',

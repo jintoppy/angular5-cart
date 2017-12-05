@@ -4,7 +4,6 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class CatalogService {
-
   constructor(private http: HttpClient) { }
 
   getProducts() {
