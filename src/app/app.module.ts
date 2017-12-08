@@ -1,5 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { CartModule } from './cart/cart.module';
@@ -17,6 +20,10 @@ import { AuthGuard } from './auth.guard';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    CommonModule,
+    HttpClientModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     CartModule,
     CheckoutModule,

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CatalogService } from '../../catalog.service';
+import 'rxjs/add/operator/switchMap';
+
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
@@ -14,15 +16,23 @@ export class ProductComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    // this.route.params
+    //   .subscribe(param => {
+    //     console.log(param.productId);
+    //     this.service.getProductById(param.productId)
+    //       .subscribe(product => {
+    //         this.product = product;
+    //       });
+    //   });
+   
+
     this.route.params
-      .subscribe(param => {
-        console.log(param.productId);
-        this.service.getProductById(param.productId)
-          .subscribe(product => {
-            this.product = product;
-          });
+      .switchMap(param => this.service.getProductById(param.productId))
+      .subscribe(product => {
+        this.product = product;
       });
     
+      
     
 
   }
