@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { SharedModule } from '../shared/shared.module';
 
 import {HttpClientModule} from '@angular/common/http';
 import { CatalogRoutingModule } from './catalog-routing.module';
@@ -12,7 +13,8 @@ import { CatalogComponent } from './components/catalog/catalog.component';
   imports: [
     CommonModule,
     CatalogRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    SharedModule
   ],
   declarations: [ProductlistComponent, ProductComponent, CatalogComponent],
   providers: [CatalogService]

@@ -1,22 +1,43 @@
 <h2>Products</h2>
 <div class="row">
   <div class="col col-md-4" *ngFor="let p of products">
-      <div class="product-list-item">
-          <h4>{{p.name}}</h4>
-          <p class="company">
-            <span>Company : </span>
-            {{p.company}}
-          </p>
-          <p>
-            <img [src]="p.imgUrl" class="img-fluid responsive-img" [alt]="p.name">
-          </p>
-          <p class="price">
-              <span>Price : </span>
-              {{p.price}}
-          </p>
-          <button class="btn btn-success">Add to Cart</button>
-          <a [routerLink]="['/catalog/product', p.id]">View Details</a>
-        </div>
+      <mat-card class="product-list-item">
+          <mat-card-header>
+            <mat-card-title>
+              {{p.name}}
+            </mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <p class="company">
+              <span>Company : </span>
+              {{p.company}}
+            </p>
+            <img mat-card-image [src]="p.imgUrl" class="img-fluid responsive-img" [alt]="p.name">
+            <p class="price">
+                <span>Price : </span>
+                {{p.price}}
+            </p>
+          </mat-card-content>
+          <mat-card-footer>
+              <mat-card-actions>
+                  <button 
+                    (click)="addToCart(addToCartModal)" 
+                    mat-raised-button 
+                    color="accent">
+                    Add to Cart
+                  </button>
+                  <a mat-button [routerLink]="['/catalog/product', p.id]">View Details</a>
+          </mat-card-actions>
+          </mat-card-footer>
+      </mat-card>
+  </div>
+</div>
+
+<ng-template #addToCartModal>
+  <div>
+    <h2>Item added to cart</h2> 
+    <button (click)="closeModal($event)" mat-raised-button color="warning">Close</button>
   </div>
   
-</div>
+  
+</ng-template>
