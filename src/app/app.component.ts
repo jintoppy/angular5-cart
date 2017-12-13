@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
-import { Store } from '@ngrx/store';
-import { addToCart } from './actions/cart.action';
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/distinctUntilChanged';
@@ -18,25 +16,12 @@ export class AppComponent {
   title = 'app';
 
   constructor(
-    private http: HttpClient,
-    private store: Store<any>
+    private http: HttpClient
   ) {
 
   }
 
   ngOnInit(){
-
-    this.store.select('cart')
-      .subscribe(val => {
-        console.log(val);
-      });
-
-    this.store.dispatch(
-      {
-        type: 'ADD_TO_CART',
-        payload: {name: 'product1'}
-      }
-    );
 
     this.searchTerm.valueChanges
             .filter(val => val.length > 3)
